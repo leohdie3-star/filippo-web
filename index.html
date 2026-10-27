@@ -17,10 +17,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 fill=%27%230A0A0A%27/%3E%3Cpath d=%27M42 22a14 14 0 1 0 0 20%27 fill=%27none%27 stroke=%27%23FF1111%27 stroke-width=%278%27/%3E%3C/svg%3E">
 <link rel="canonical" href="https://leohdie3-star.github.io/filippo-web/">
+<!-- Foto do hero pedida junto com o HTML (sem quadro vazio no primeiro instante) -->
+<link rel="preload" as="image" href="assets/img/retrato-m-780.webp" imagesrcset="assets/img/retrato-m-480.webp 480w, assets/img/retrato-m-780.webp 780w" imagesizes="100vw" media="(max-width: 820px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/retrato-820.webp" imagesrcset="assets/img/retrato-520.webp 520w, assets/img/retrato-820.webp 820w, assets/img/retrato-1200.webp 1200w" imagesizes="(max-width: 1200px) 42vw, 520px" media="(min-width: 821px)" fetchpriority="high">
 <link rel="preload" href="assets/fonts/CreatoDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/abnes.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" imagesrcset="assets/img/retrato-m-480.webp 480w, assets/img/retrato-m-780.webp 780w" imagesizes="100vw" media="(max-width: 820px)" fetchpriority="high">
-<link rel="preload" as="image" imagesrcset="assets/img/retrato-520.webp 520w, assets/img/retrato-820.webp 820w, assets/img/retrato-1200.webp 1200w" imagesizes="(max-width: 1200px) 42vw, 520px" media="(min-width: 821px)" fetchpriority="high">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"UNICO — Filippo Rodrigues","image":"https://leohdie3-star.github.io/filippo-web/assets/img/og-filippo.jpg","founder":{"@type":"Person","name":"Filippo Rodrigues","jobTitle":"Designer para Influencers"},"description":"Web design, branding e estratégia de conteúdo para influenciadores e criadores.","email":"staffilippoweb@gmail.com","sameAs":["https://www.instagram.com/filippo.web","https://www.instagram.com/lipporodrilippo","https://kick.com/filippoweb"]}
 </script>
@@ -94,14 +95,6 @@ header.rolou{border-bottom-color:var(--filete);background:rgba(10,10,10,.9)}
 .menu-btn{display:none;background:none;border:1px solid var(--filete);color:var(--texto);min-height:44px;min-width:44px;padding:0 14px;font:700 13px var(--titulo);letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
 .so-mobile{display:none}
 
-/* ---------- Nav lateral desktop (só telas largas; mobile usa o menu) ---------- */
-.nav-lateral{display:none}
-@media(min-width:1400px){
-  .nav-lateral{position:fixed;left:22px;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;gap:6px}
-  .nav-lateral a{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--apoio2);padding:6px 0 6px 10px;border-left:2px solid transparent;transition:color .2s ease,border-color .2s ease}
-  .nav-lateral a:hover{color:#fff;border-left-color:var(--acento)}
-}
-
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden;padding:128px 0 0;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 55% at 78% 45%,rgba(255,17,17,.22),transparent 70%);pointer-events:none}
@@ -116,13 +109,13 @@ header.rolou{border-bottom-color:var(--filete);background:rgba(10,10,10,.9)}
 .hero .apoio{color:var(--apoio);font-size:clamp(17px,1.5vw,20px);max-width:540px}
 .hero .ctas{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
 .hero-provas{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:clamp(18px,3vw,40px);margin-top:40px;padding-top:24px;border-top:1px solid var(--filete)}
-.hero-provas b{display:block;font-family:var(--marca);font-weight:400;font-size:clamp(26px,2.6vw,36px);line-height:1;color:#fff;letter-spacing:.02em}
+.hero-provas b{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(30px,3vw,42px);line-height:1;color:#fff;letter-spacing:-.02em}
 @media(min-width:821px){.hero-provas b{white-space:nowrap}}
 .hero-provas span{display:block;margin-top:8px;font-size:13px;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--apoio2);max-width:16ch}
-.hero-foto{position:relative;margin:0;justify-self:end;width:100%;max-width:520px;background:#171013}
+.hero-foto{position:relative;margin:0;justify-self:end;width:100%;max-width:520px}
 .hero-foto .moldura{position:absolute;inset:18px -18px -18px 18px;border:1px solid rgba(255,17,17,.55);pointer-events:none}
 .hero-foto picture,.hero-foto img{display:block;width:100%}
-.hero-foto img{aspect-ratio:2/3;object-fit:cover;object-position:50% 30%;filter:contrast(1.06) saturate(.95)}
+.hero-foto img{aspect-ratio:2/3;object-fit:cover;object-position:50% 30%;filter:contrast(1.06) saturate(.95);background:#111 url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAACQBACdASoYACQAPu1uq1EppqOjqrgKATAdiUAZ1gRW1DCQMYZO5j3TV5MEQ0AA/vaCVjhpgWW779hQj6fsovGgtYWP82/YpUdNpErnt8xNPpjwnYgzU3GpZRtOOMol0fxRpaupqzz5GdXLCrXthQAA) 50% 30%/cover no-repeat}
 .hero-foto::after{content:"";position:absolute;left:0;right:0;bottom:0;height:35%;background:linear-gradient(to top,var(--fundo),transparent);pointer-events:none}
 .hero-foto figcaption{position:absolute;left:18px;bottom:22px;z-index:2;font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--apoio)}
 .hero-foto figcaption b{display:block;color:#fff;font-size:15px;letter-spacing:.12em}
@@ -135,7 +128,10 @@ header.rolou{border-bottom-color:var(--filete);background:rgba(10,10,10,.9)}
 .hero-foto img{animation:fotoAbre 1.4s var(--ease) both}
 .hero-foto .moldura{animation:molduraEntra 1.2s .5s var(--ease) both}
 @keyframes sobe{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
-@keyframes fotoAbre{from{opacity:0;clip-path:inset(12% 0 0 0);transform:scale(1.06)}to{opacity:1;clip-path:inset(0 0 0 0);transform:scale(1)}}
+/* a foto nunca começa invisível: abre por recorte e escala, sem passar por opacidade 0 */
+@keyframes fotoAbre{from{clip-path:inset(6% 0 0 0);transform:scale(1.05)}to{clip-path:inset(0 0 0 0);transform:scale(1)}}
+.numero-entra{animation:numeroEntra .7s var(--ease) both}
+@keyframes numeroEntra{from{opacity:.15;transform:translateY(.28em);filter:blur(4px)}to{opacity:1;transform:none;filter:none}}
 @keyframes molduraEntra{from{opacity:0;transform:translate(-18px,-18px)}to{opacity:1;transform:none}}
 
 /* ---------- Marquee ---------- */
@@ -159,7 +155,7 @@ header.rolou{border-bottom-color:var(--filete);background:rgba(10,10,10,.9)}
 .case-heroi-texto h3{font-family:var(--titulo);font-weight:700;font-size:clamp(30px,3.6vw,46px);text-transform:uppercase;line-height:1.02;letter-spacing:-.01em;margin:12px 0 16px}
 .case-heroi-texto p{color:var(--apoio)}
 .numeros{display:flex;gap:16px 34px;margin-top:26px;flex-wrap:wrap}
-.numeros b{display:block;font-family:var(--marca);font-weight:400;font-size:clamp(30px,3vw,40px);line-height:1;color:#fff}
+.numeros b{display:block;font-family:var(--titulo);font-weight:700;font-size:clamp(34px,3.4vw,46px);line-height:1;color:#fff;letter-spacing:-.02em}
 .numeros .txt{font-family:var(--titulo);font-weight:700;font-size:clamp(20px,2vw,24px);line-height:1.2}
 .numeros span{display:block;margin-top:8px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--apoio2)}
 /* Slider narrativo antes/depois — HONESTO: compara ponto de partida e
@@ -216,7 +212,7 @@ header.rolou{border-bottom-color:var(--filete);background:rgba(10,10,10,.9)}
 .case-card:hover .capa .mono{transform:translate(-10px,-6px) scale(1.04)}
 .capa .chave{position:absolute;left:18px;bottom:16px;right:18px;z-index:2}
 .capa .chave b{display:block;font-family:var(--titulo);font-weight:700;font-size:34px;line-height:1;letter-spacing:-.01em;color:#fff;text-transform:uppercase}
-.capa .chave b.num{font-family:var(--marca);font-weight:400;font-size:42px;letter-spacing:.02em}
+.capa .chave b.num{font-size:46px;letter-spacing:-.02em}
 .capa .chave span{display:block;margin-top:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.78)}
 .capa .ord{position:absolute;right:16px;top:42px;font-family:var(--titulo);font-weight:700;font-size:15px;letter-spacing:.08em;color:rgba(255,255,255,.6);z-index:2}
 .v1{background:radial-gradient(120% 100% at 90% 0%,#FF1111 0%,#7a0306 34%,#160204 72%)}
@@ -297,31 +293,52 @@ header.rolou{border-bottom-color:var(--filete);background:rgba(10,10,10,.9)}
 .mentoria-img::before{content:"";position:absolute;inset:10% 6%;background:radial-gradient(closest-side,rgba(255,17,17,.35),transparent);filter:blur(10px)}
 .mentoria-img img{position:relative;width:100%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
 .mentoria-img figcaption{position:relative;font-size:16px;color:var(--apoio2);text-align:center;margin-top:8px}
+/* Notebook 3D (Three.js) — o palco tem proporção fixa: a foto e o canvas ocupam o mesmo espaço, sem pulo de layout */
+.mentoria-grid:has(.nb){grid-template-columns:.92fr 1.08fr}
+.nb-palco{position:relative;aspect-ratio:1/.86;touch-action:pan-y;cursor:grab;outline:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.nb-palco.arrastando{cursor:grabbing}
+.nb-palco:focus-visible{outline:2px solid var(--acento);outline-offset:4px}
+.mentoria-img .nb-plano{position:absolute;inset:0;margin:auto;width:100%;height:100%;object-fit:contain;transition:opacity .6s ease}
+.nb-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:0;transition:opacity .6s ease}
+.nb-3d .nb-canvas{opacity:1}
+.nb-3d .nb-plano{opacity:0;pointer-events:none}
+.nb-tag{position:absolute;z-index:2;pointer-events:none;font-family:var(--titulo);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:9px 16px;box-shadow:0 12px 30px rgba(0,0,0,.45);white-space:nowrap;will-change:transform}
+.nb-tag1{top:9%;right:4%;background:var(--acento);color:#fff;transform:translate3d(calc(var(--gx,0) * -26px),calc(var(--gy,0) * 10px),0) rotate(7deg)}
+.nb-tag2{bottom:13%;left:2%;background:#0A0A0A;color:#fff;border:1px solid #3a3a40;transform:translate3d(calc(var(--gx,0) * 30px),calc(var(--gy,0) * -12px),0) rotate(-5deg)}
+.nb-dica{position:absolute;z-index:2;left:50%;bottom:2%;transform:translate(-50%,8px);display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid #3a3a40;background:rgba(10,10,10,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--texto);white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .5s ease,transform .5s var(--ease)}
+.nb-dica i{font-style:normal;color:var(--acento);font-size:17px;letter-spacing:0;animation:dicaVai 1.6s ease-in-out infinite}
+@keyframes dicaVai{0%,100%{transform:translateX(-3px)}50%{transform:translateX(3px)}}
+.nb-3d.nb-dica-on .nb-dica{opacity:1;transform:translate(-50%,0)}
+.nb-3d.nb-usou .nb-dica{opacity:0}
 .mentoria-ctas{display:flex;gap:10px 20px;align-items:center;flex-wrap:wrap;margin-top:28px}
 
-/* ---------- Notebook 3D — modelo real (MacBook Pro, Three.js vendado) ----------
-   Modelo 3D real baixado (CC-BY-4.0, jackbaeten/Sketchfab "macbook pro M3 16
-   inch 2024"), tampa articulada por corte geométrico na dobradiça, tela com
-   captura real do unicoweb.com.br. Three.js + GLTFLoader + Draco vendados em
-   assets/js (zero CDN em runtime — a trava só veta script externo http(s)).
-   Sem WebGL ou sem modelo: o JS esconde o palco e mostra a foto plana. */
-.nb3d-palco{position:relative;width:100%;max-width:560px;margin:12px auto 0;aspect-ratio:100/102;min-height:300px;max-height:580px;overflow:hidden;cursor:grab;touch-action:pan-y;outline:none;background:radial-gradient(closest-side,rgba(255,17,17,.12),transparent)}
-.nb3d-palco:active{cursor:grabbing}
-.nb3d-webgl{position:absolute;inset:0}
-.nb3d-webgl canvas{display:block;width:100%;height:100%}
-.nb3d-controles{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
-.nb3d-hint{font-size:16px;color:var(--apoio2);text-align:center;margin-top:10px}
-.nb3d-fallback{display:none;width:100%;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6))}
-.nb3d-credito{font-size:13px;color:var(--apoio2);text-align:center;margin-top:6px}
-.nb3d-credito a{color:inherit;text-decoration:underline}
+/* ---------- Letreiro gigante vazado atrás da mentoria (desktop) ---------- */
+#mentoria{overflow:hidden}
+.gigante{display:none}
+@media(min-width:981px){.gigante{display:block;position:absolute;left:50%;top:50%;margin:-.5em 0 0;transform:translateX(-50%);font-family:var(--marca);font-size:clamp(200px,24vw,380px);line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.07);white-space:nowrap;pointer-events:none;z-index:0}#mentoria .wrap{position:relative;z-index:1}}
+
+/* ---------- Nav lateral (desktop largo) ---------- */
+.nav-lateral{display:none}
+@media(min-width:1380px){.nav-lateral{display:flex;flex-direction:column;gap:4px;position:fixed;left:22px;top:50%;transform:translate(-12px,-50%);z-index:40;opacity:0;pointer-events:none;transition:opacity .4s ease,transform .4s var(--ease)}
+.nav-lateral.mostra{opacity:1;transform:translate(0,-50%);pointer-events:auto}
+.nav-lateral a{position:relative;display:flex;align-items:center;gap:10px;min-height:32px;font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6d6d74;transition:color .25s ease}
+.nav-lateral a::before{content:"";width:14px;height:1px;background:currentColor;transition:width .3s var(--ease),background .25s ease}
+.nav-lateral a:hover{color:var(--texto)}
+.nav-lateral a.on{color:var(--texto)}
+.nav-lateral a.on::before{width:28px;background:var(--acento)}
+.nav-lateral span{transition:opacity .3s ease,transform .3s var(--ease)}}
+/* 1380–1599px: o vão lateral é estreito — só os traços; os nomes abrem ao passar o mouse */
+@media(min-width:1380px) and (max-width:1599px){.nav-lateral span{opacity:0;transform:translateX(-6px);pointer-events:none}
+.nav-lateral:hover span,.nav-lateral:focus-within span{opacity:1;transform:none}
+.nav-lateral:hover,.nav-lateral:focus-within{background:rgba(10,10,10,.92);box-shadow:0 0 0 14px rgba(10,10,10,.92)}}
 
 /* ---------- Publicidade ---------- */
 .publi-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(24px,4vw,48px);margin-top:44px;align-items:stretch}
 .publi-foto{position:relative;margin:0;overflow:hidden;border:1px solid var(--filete);min-height:320px}
 .publi-foto img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;filter:grayscale(.2) contrast(1.05);transition:transform 1.2s var(--ease)}
 .publi-foto:hover img{transform:scale(1.04)}
-.publi-foto figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 18px;background:linear-gradient(to top,rgba(10,10,10,.95),transparent);font-size:16px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--apoio)}
-.publi-foto figcaption b{display:block;font-family:var(--marca);font-weight:400;font-size:34px;letter-spacing:.02em;color:#fff;margin-bottom:4px}
+.publi-foto figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 20px 18px;background:linear-gradient(to top,rgba(10,10,10,.95),transparent);font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--apoio)}
+.publi-foto figcaption b{display:block;font-family:var(--titulo);font-weight:700;font-size:40px;letter-spacing:-.02em;line-height:1.05;color:#fff;margin-bottom:4px}
 .publicidade{background:var(--superficie);border:1px solid var(--filete);padding:clamp(24px,3.4vw,44px)}
 .publicidade .linha{display:grid;grid-template-columns:minmax(0,190px) 1fr;gap:6px 20px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--filete)}
 .publicidade .linha:first-child{padding-top:0}
@@ -333,7 +350,7 @@ header.rolou{border-bottom-color:var(--filete);background:rgba(10,10,10,.9)}
 .sobre-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,4.5vw,64px);margin-top:44px;align-items:start}
 .sobre-foto{position:relative;margin:0}
 .sobre-foto img{width:100%;border:1px solid var(--filete)}
-.sobre-foto figcaption{margin-top:10px;font-size:14px;color:var(--apoio2)}
+.sobre-foto figcaption{margin-top:10px;font-size:16px;color:var(--apoio2)}
 .sobre-texto p{color:var(--apoio);margin-bottom:16px;font-size:clamp(17px,1.4vw,19px)}
 .sobre-texto .microcopy{color:var(--texto);font-style:italic}
 .nomes-grade{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}
@@ -364,7 +381,7 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
 .rodape-grid a:hover{color:#fff}
 .rodape-grid .sociais{color:var(--apoio);font-size:16px;line-height:1.9}
 .rodape-grid .sociais a{text-decoration:underline;text-underline-offset:3px}
-.copy{margin-top:40px;font-size:13px;color:var(--apoio2);letter-spacing:.1em}
+.copy{margin-top:40px;font-size:16px;color:var(--apoio2);letter-spacing:.06em}
 
 /* ---------- CTA flutuante mobile — leva ao orçamento (não há WhatsApp público dele) ---------- */
 .cta-fixo{display:none;position:fixed;bottom:calc(14px + env(safe-area-inset-bottom));left:14px;right:14px;z-index:60;transform:translateY(140%);transition:transform .45s var(--ease);box-shadow:0 12px 30px -8px rgba(0,0,0,.8)}
@@ -392,23 +409,21 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
   .wordmark{font-size:19px;letter-spacing:.08em}
   .nav-acoes{gap:8px}
   .menu-btn{padding:0 10px;font-size:12.5px;letter-spacing:.06em}
-  header{transition:border-color .3s ease,background .3s ease,transform .35s ease}
-  header.some{transform:translateY(-100%)}
-  .hero{padding:84px 0 0;min-height:auto;display:block}
+  .hero{padding:64px 0 0;min-height:auto;display:block}
   .hero::before{background:radial-gradient(90% 40% at 50% 30%,rgba(255,17,17,.25),transparent 70%)}
   .hero-letreiro{top:72px}
   .letreiro-trilho span{font-size:88px}
   .hero-grid{grid-template-columns:1fr;gap:0}
   .hero-foto{order:-1;max-width:none;margin:0 calc(-1 * clamp(20px,4vw,32px));width:auto;justify-self:stretch}
   .hero-foto .moldura{display:none}
-  .hero-foto img{aspect-ratio:4/5;max-height:72svh;object-position:50% 18%}
+  .hero-foto img{aspect-ratio:4/5;max-height:72svh;object-position:50% 18%;background-image:url(data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAADQBACdASoYAB4APuVeo02pJSMiMAwBIByJQBf9hDvx7IC1ldCO9avTds30ZhCAAAD+9Wc2hP6YDbCuuRmlrfCUsK6B0r0jE3xGmU5OfYc5YT1eEZ5F2J++yvZbzsIuyEdTx/m1oEC6CLYbQtIIAAAA);background-position:50% 18%}
   .hero-foto::after{height:55%;background:linear-gradient(to top,var(--fundo) 8%,rgba(10,10,10,.6) 45%,transparent)}
   .hero-foto figcaption{display:none}
   .hero-texto{position:relative;margin-top:-118px}
   .hero h1{font-size:clamp(34px,10.4vw,52px);margin:12px 0 16px}
   .hero .ctas .btn{flex:1 1 100%}
   .hero-provas{grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}
-  .hero-provas b{font-size:clamp(22px,7vw,30px)}
+  .hero-provas b{font-size:clamp(26px,8vw,34px)}
   .hero-provas span{font-size:12px;letter-spacing:.04em}
   .hero-faixa{margin-top:36px}
   .case-heroi{grid-template-columns:1fr}
@@ -434,7 +449,14 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
   .processo-grade{grid-template-columns:1fr;row-gap:26px}
   .etapa{display:grid;grid-template-columns:44px 1fr;column-gap:18px;position:relative;z-index:1}
   .etapa .no{grid-row:1/3;margin:0}
-  .mentoria-grid{grid-template-columns:1fr}
+  .mentoria-grid,.mentoria-grid:has(.nb){grid-template-columns:1fr}
+  .mentoria-grid .nb{order:-1;margin:0 calc(-1 * clamp(20px,4vw,32px))}
+  .nb-palco{aspect-ratio:1/.92}
+  .nb-tag{font-size:12px;padding:7px 12px}
+  .nb-tag1{top:6%;right:5%}
+  .nb-tag2{bottom:19%;left:4%}
+  .nb-dica{bottom:1%;font-size:12.5px}
+  .mentoria-img figcaption{padding:0 20px}
   .publi-grid{grid-template-columns:1fr}
   .publi-foto{min-height:0;aspect-ratio:4/3.4}
   .publicidade .linha{grid-template-columns:1fr}
@@ -485,14 +507,16 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
     </div>
   </div>
 </header>
-<nav class="nav-lateral" aria-label="Seções da página">
-  <a href="#cases">Cases</a><a href="#museu">Museu</a><a href="#servicos">Serviços</a><a href="#processo">Processo</a><a href="#mentoria">Mentoria</a><a href="#sobre">Sobre</a><a href="orcamento.html">Orçamento</a>
+
+<!-- Nav lateral fixa (só desktop largo; no celular segue o Menu) -->
+<nav class="nav-lateral" id="navLateral" aria-label="Seções da página">
+  <a href="#cases"><span>Cases</span></a><a href="#museu"><span>Museu</span></a><a href="#servicos"><span>Serviços</span></a><a href="#processo"><span>Processo</span></a><a href="#mentoria"><span>Mentoria</span></a><a href="#publicidade"><span>Publicidade</span></a><a href="#sobre"><span>Sobre</span></a><a href="#contato"><span>Orçamento</span></a>
 </nav>
 
 <main id="topo">
   <!-- HERO -->
   <section class="hero" aria-label="Apresentação">
-    <div class="hero-letreiro" aria-hidden="true"><div class="letreiro-trilho"><span>UNICO — UNICO — UNICO — UNICO —&nbsp;</span><span>UNICO — UNICO — UNICO — UNICO —&nbsp;</span></div></div>
+    <div class="hero-letreiro" aria-hidden="true" data-parallax="0.22"><div class="letreiro-trilho"><span>UNICO — UNICO — UNICO — UNICO —&nbsp;</span><span>UNICO — UNICO — UNICO — UNICO —&nbsp;</span></div></div>
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-texto">
@@ -504,8 +528,8 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
             <a class="btn btn-fantasma" href="#cases">Ver cases <span aria-hidden="true">↓</span></a>
           </div>
           <div class="hero-provas entra" style="--e:.55s">
-            <div><b data-conta="10">10</b><span>cases reais entregues</span></div>
-            <div><b data-conta="38" data-suf=" mil">38 mil</b><span>seguidores no @filippo.web</span></div>
+            <div><b>10</b><span>cases reais entregues</span></div>
+            <div><b>38 mil</b><span>seguidores no @filippo.web</span></div>
             <div><b>3<i class="vg">,</i>2 mi</b><span>seguidores do Ygor Bueno, cliente</span></div>
           </div>
         </div>
@@ -513,7 +537,7 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
           <span class="moldura" aria-hidden="true"></span>
           <picture>
             <source media="(max-width: 820px)" srcset="assets/img/retrato-m-480.webp 480w, assets/img/retrato-m-780.webp 780w" sizes="100vw">
-            <img src="assets/img/retrato-820.webp" srcset="assets/img/retrato-520.webp 520w, assets/img/retrato-820.webp 820w, assets/img/retrato-1200.webp 1200w" sizes="(max-width: 1200px) 42vw, 520px" width="820" height="1230" alt="Retrato de Filippo Rodrigues, de jaqueta preta e corrente prateada, sobre fundo preto" fetchpriority="high" decoding="sync">
+            <img src="assets/img/retrato-820.webp" srcset="assets/img/retrato-520.webp 520w, assets/img/retrato-820.webp 820w, assets/img/retrato-1200.webp 1200w" sizes="(max-width: 1200px) 42vw, 520px" width="820" height="1230" alt="Retrato de Filippo Rodrigues, de jaqueta preta e corrente prateada, sobre fundo preto" fetchpriority="high" decoding="async">
           </picture>
           <figcaption><b>Filippo Rodrigues</b>CEO da Sociedade ÚNICO</figcaption>
         </figure>
@@ -752,6 +776,7 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
 
   <!-- MENTORIA -->
   <section class="capitulo" id="mentoria">
+    <span class="gigante" aria-hidden="true" data-parallax="-0.18">ÚNICO</span>
     <div class="wrap">
       <p class="rotulo reveal"><b>05</b> Mentoria</p>
       <h2 class="reveal">Aprenda a fazer o que eu faço</h2>
@@ -773,18 +798,15 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
             <a class="link-seta" href="orcamento.html?tipo=mentoria">ou pede orçamento de mentoria <span aria-hidden="true">→</span></a>
           </div>
         </div>
-        <figure class="mentoria-img reveal">
-          <div class="nb3d-palco" id="nb3dPalco" tabindex="0" aria-label="Notebook 3D da mentoria — arraste para girar, use as setas do teclado">
-            <div class="nb3d-webgl" id="nb3dWebgl"></div>
+        <!-- Notebook 3D: malha Three.js + a tela real do site dele (retificada). Sem WebGL, fica a foto. -->
+        <figure class="mentoria-img nb reveal" id="nbFigura">
+          <div class="nb-palco" id="nbPalco" tabindex="0" role="group" aria-roledescription="visualizador 3D" aria-label="Notebook em 3D com uma aula do trilho Site com IA na tela. Arraste para girar; as setas do teclado também giram.">
+            <img class="nb-plano" src="assets/img/mentoria-890.webp" srcset="assets/img/mentoria-560.webp 560w, assets/img/mentoria-890.webp 890w" sizes="(max-width: 820px) 100vw, 640px" width="890" height="571" alt="Notebook com uma aula da mentoria Site com IA do Filippo aberta na tela" loading="lazy" decoding="async">
+            <span class="nb-tag nb-tag1" aria-hidden="true">Site com IA</span>
+            <span class="nb-tag nb-tag2" aria-hidden="true">Criação de conteúdo</span>
+            <span class="nb-dica" aria-hidden="true"><i>↔</i> Arraste para girar 360°</span>
           </div>
-          <img class="nb3d-fallback" id="nb3dFallback" src="assets/img/mentoria-890.webp" srcset="assets/img/mentoria-560.webp 560w, assets/img/mentoria-890.webp 890w" sizes="(max-width: 820px) 92vw, 560px" width="890" height="571" alt="Notebook com uma aula da mentoria Site com IA do Filippo aberta na tela" loading="lazy" decoding="async">
-          <div class="nb3d-controles">
-            <button class="btn btn-fantasma" id="nb3dAnt" type="button" aria-label="Girar notebook para a esquerda">← Girar</button>
-            <button class="btn btn-fantasma" id="nb3dProx" type="button" aria-label="Girar notebook para a direita">Girar →</button>
-          </div>
-          <p class="nb3d-hint">Arraste para girar — mouse ou toque. A tampa abre sozinha quando a seção entra na tela.</p>
-          <figcaption>Notebook 3D real — na tela, o site do próprio Filippo (unicoweb.com.br)</figcaption>
-          <p class="nb3d-credito">Modelo 3D: MacBook Pro M3 por <a href="https://sketchfab.com/jackbaeten" target="_blank" rel="noopener">jackbaeten</a> (Sketchfab), licença CC-BY-4.0</p>
+          <figcaption>Trilho Site com IA — a tela é a imagem real do site atual dele</figcaption>
         </figure>
       </div>
     </div>
@@ -836,7 +858,7 @@ footer{border-top:1px solid var(--filete);padding:64px 0 40px}
 
   <!-- FECHAMENTO -->
   <section class="final" id="contato" aria-label="Fazer orçamento">
-    <span class="final-letra" aria-hidden="true">ÚNICO</span>
+    <span class="final-letra" aria-hidden="true" data-parallax="-0.12">ÚNICO</span>
     <div class="wrap">
       <div class="final-grid">
         <div class="final-texto">
@@ -886,7 +908,6 @@ var finoPonteiro = window.matchMedia('(pointer: fine)').matches;
 /* Menu mobile */
 var menuBtn = document.getElementById('menuBtn'), nav = document.getElementById('navLinks');
 menuBtn.addEventListener('click', function () {
-  document.getElementById('topoSite').classList.remove('some');
   var aberto = nav.classList.toggle('aberto');
   menuBtn.setAttribute('aria-expanded', aberto); menuBtn.textContent = aberto ? 'Fechar' : 'Menu';
 });
@@ -905,23 +926,8 @@ if ('IntersectionObserver' in window) {
   document.querySelectorAll('.reveal,.revela-img').forEach(function (el) { io.observe(el); });
 } else { document.documentElement.classList.add('sem-io'); }
 
-/* Contadores — terminam SEMPRE no número real escrito no HTML.
-   Números pequenos (10, 38) NÃO animam dígito a dígito: no vídeo do review,
-   9→10 ou 36→38 mil parece número errado. O valor final apenas aparece.
-   Contagens grandes (278, 80+) animam rápido, em 700ms. */
-function conta(el) {
-  var alvo = +el.getAttribute('data-conta'), suf = el.getAttribute('data-suf') || '', final = el.textContent;
-  if (reduz || !alvo) return;
-  if (alvo <= 50) return;
-  var t0 = null, dur = 700;
-  function passo(t) {
-    if (!t0) t0 = t;
-    var p = Math.min((t - t0) / dur, 1), v = Math.round(alvo * (1 - Math.pow(1 - p, 3)));
-    el.textContent = v + suf;
-    if (p < 1) requestAnimationFrame(passo); else el.textContent = final;
-  }
-  requestAnimationFrame(passo);
-}
+/* Números — entram já com o valor real (sem contagem: nenhum número intermediário aparece na gravação) */
+function conta(el) { if (!reduz) el.classList.add('numero-entra'); }
 if ('IntersectionObserver' in window) {
   var ioC = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { conta(e.target); ioC.unobserve(e.target); } });
@@ -937,13 +943,6 @@ function aoRolar() {
   var h = document.documentElement, y = window.pageYOffset, max = h.scrollHeight - h.clientHeight, vh = window.innerHeight;
   barraTopo.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
   header.classList.toggle('rolou', y > 20);
-  /* Header some ao rolar para baixo no mobile, volta ao rolar para cima (nunca com o menu aberto) */
-  var menuAberto = document.getElementById('navLinks').classList.contains('aberto');
-  if (window.matchMedia('(max-width: 820px)').matches && !menuAberto) {
-    if (y > ultimoY && y > 140) header.classList.add('some');
-    else if (y < ultimoY) header.classList.remove('some');
-  } else header.classList.remove('some');
-  ultimoY = y;
   if (bloco) {
     var r = bloco.getBoundingClientRect(), total = r.height + vh * 0.3;
     var p = Math.min(Math.max((vh * 0.8 - r.top) / total, 0), 1);
@@ -956,7 +955,7 @@ function aoRolar() {
     ctaFixo.classList.toggle('mostra', passouHero && !noFinal);
   }
 }
-var ultimoY = 0, tick = false;
+var tick = false;
 window.addEventListener('scroll', function () {
   if (!tick) { tick = true; requestAnimationFrame(function () { aoRolar(); tick = false; }); }
 }, { passive: true });
@@ -1145,328 +1144,6 @@ if (finoPonteiro && !reduz) {
   desenha();
 })();
 
-/* NOTEBOOK 3D REAL — modelo MacBook Pro (Three.js vendado, tampa articulada) */
-(function () {
-  var palco = document.getElementById('nb3dPalco');
-  var mount = document.getElementById('nb3dWebgl');
-  var fallback = document.getElementById('nb3dFallback');
-  var controles = document.querySelector('.nb3d-controles');
-  if (!palco || !mount) return;
-  var reduz = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  function falha() {
-    palco.style.display = 'none';
-    if (fallback) fallback.style.display = 'block';
-    if (controles) controles.style.display = 'none';
-  }
-  if (!window.WebGLRenderingContext) { falha(); return; }
-
-  /* Telas da vitrine: SÓ entra captura real de site público verificado e
-     atribuível ao Filippo. Hoje: só o site dele (unicoweb.com.br).
-     PENDENTES (sem URL pública verificável — NÃO entrar sem verificação):
-     Niccole Reis, Lucas Figars, Fashion Girl, Renan Ramos, MEYS, Brites BX1,
-     Nava FitWear, Reis Cosmetic, Cria Buzz. Ygor Bueno REJEITADO (página de
-     login do time + rodapé creditando outra empresa). Ver NOTEBOOK-3D-REAL.md. */
-  var SCREENS = [
-    { src: 'assets/img/tela-unicoweb.jpg', label: 'unicoweb.com.br', url: 'https://unicoweb.com.br' }
-  ];
-  var HINGE_Y = -12.6;              /* plano de corte na dobradiça (coords locais do modelo) */
-  var PIVOT_WORLD = { x: 0, y: 0.4, z: -12.6 }; /* eixo da dobradiça (coords de mundo) */
-  var LID_CLOSED = 1.92;            /* ~110° — tampa fechada sobre a base */
-  var DISPLAY_MESH = 'Object_123';  /* malha da tela (mapa emissivo = papel de parede) */
-
-  function loadScript(src) {
-    return new Promise(function (resolve, reject) {
-      var s = document.createElement('script');
-      s.src = src; s.onload = resolve; s.onerror = reject;
-      document.head.appendChild(s);
-    });
-  }
-  function easeOutCubic(p) { return 1 - Math.pow(1 - p, 3); }
-
-  /* Corte de geometria pelo plano y=HINGE_Y (coords locais): triângulos de um
-     lado vão para a tampa, do outro para a base; triângulos que cruzam o plano
-     são recortados com interpolação de todos os atributos. */
-  function splitGeometry(geom, planeY) {
-    var src = geom.index ? geom.toNonIndexed() : geom;
-    var attrs = src.attributes, names = Object.keys(attrs);
-    var pos = attrs.position, count = pos.count;
-    var L = {}, B = {};
-    names.forEach(function (k) { L[k] = []; B[k] = []; });
-    var posArr = pos.array, posSize = pos.itemSize;
-    function dAt(i) { return posArr[i * posSize + 1] - planeY; }
-    function emit(out, v) {
-      names.forEach(function (k) {
-        var a = attrs[k], arr = a.array, sz = a.itemSize;
-        for (var c = 0; c < sz; c++) {
-          out[k].push(v.t === undefined ? arr[v.i * sz + c]
-            : arr[v.i * sz + c] + (arr[v.j * sz + c] - arr[v.i * sz + c]) * v.t);
-        }
-      });
-    }
-    function tri(out, a, b, c) { emit(out, a); emit(out, b); emit(out, c); }
-    function cross(a, b) {
-      var da = dAt(a.i), db = dAt(b.i);
-      return { i: a.i, j: b.i, t: da / (da - db) };
-    }
-    for (var v = 0; v < count; v += 3) {
-      var vtx = [{ i: v }, { i: v + 1 }, { i: v + 2 }];
-      var lid = vtx.map(function (x) { return dAt(x.i) < 0; });
-      var nl = lid.filter(Boolean).length;
-      if (nl === 0) { tri(B, vtx[0], vtx[1], vtx[2]); continue; }
-      if (nl === 3) { tri(L, vtx[0], vtx[1], vtx[2]); continue; }
-      var lp = [], bp = [];
-      for (var e = 0; e < 3; e++) {
-        var A = vtx[e], Bv = vtx[(e + 1) % 3];
-        var Ain = dAt(A.i) < 0, Bin = dAt(Bv.i) < 0;
-        if (Ain) lp.push(A); else bp.push(A);
-        if (Ain !== Bin) { var X = cross(A, Bv); lp.push(X); bp.push(X); }
-      }
-      for (var f = 1; f < lp.length - 1; f++) tri(L, lp[0], lp[f], lp[f + 1]);
-      for (var g = 1; g < bp.length - 1; g++) tri(B, bp[0], bp[g], bp[g + 1]);
-    }
-    function build(arrays) {
-      var g = new THREE.BufferGeometry();
-      names.forEach(function (k) {
-        g.setAttribute(k, new THREE.BufferAttribute(new Float32Array(arrays[k]), attrs[k].itemSize));
-      });
-      return g;
-    }
-    return { lid: build(L), base: build(B) };
-  }
-
-  var renderer, scene, camera, yawGroup, pivot, displayMat = null;
-  var yaw = -0.24, lidAngle = LID_CLOSED, velYaw = 0, dragging = false;
-  var lastX = 0, x0 = 0, moved = false, inertia = null, yawAnim = null, lidAnim = null;
-  var visible = true, screenIdx = 0, screenTimer = null, needsRender = false;
-
-  function fit() {
-    if (!renderer || !camera) return;
-    var w = palco.clientWidth, h = palco.clientHeight;
-    if (!w || !h) return;
-    renderer.setSize(w, h, false);
-    camera.aspect = w / h;
-    camera.updateProjectionMatrix();
-    needsRender = true;
-  }
-  function render() { if (renderer && scene && camera) renderer.render(scene, camera); }
-  function loop() { requestAnimationFrame(loop); if (visible && needsRender) { render(); needsRender = false; } }
-
-  function setYaw(target, animate) {
-    target = Math.max(-1.31, Math.min(1.31, target));
-    if (yawAnim) cancelAnimationFrame(yawAnim);
-    if (!animate) { yaw = target; if (yawGroup) yawGroup.rotation.y = yaw; needsRender = true; return; }
-    var start = yaw, t0 = null;
-    (function passo(t) {
-      if (!t0) t0 = t;
-      var p = Math.min((t - t0) / 520, 1);
-      yaw = start + (target - start) * easeOutCubic(p);
-      if (yawGroup) yawGroup.rotation.y = yaw;
-      needsRender = true;
-      if (p < 1) yawAnim = requestAnimationFrame(passo); else yawAnim = null;
-    })(performance.now());
-  }
-  function setLid(angle, animate, dur) {
-    angle = Math.max(0, Math.min(LID_CLOSED, angle));
-    if (lidAnim) cancelAnimationFrame(lidAnim);
-    if (!animate || reduz) { lidAngle = angle; if (pivot) pivot.rotation.x = lidAngle; needsRender = true; return; }
-    var start = lidAngle, t0 = null;
-    (function passo(t) {
-      if (!t0) t0 = t;
-      var p = Math.min((t - t0) / (dur || 1500), 1);
-      lidAngle = start + (angle - start) * easeOutCubic(p);
-      if (pivot) pivot.rotation.x = lidAngle;
-      needsRender = true;
-      if (p < 1) lidAnim = requestAnimationFrame(passo); else lidAnim = null;
-    })(performance.now());
-  }
-
-  function init() {
-    try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      renderer.setClearColor(0x000000, 0);
-      renderer.outputEncoding = THREE.sRGBEncoding;
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-      mount.appendChild(renderer.domElement);
-      scene = new THREE.Scene();
-      camera = new THREE.PerspectiveCamera(38, 1, 0.1, 500);
-      scene.add(new THREE.AmbientLight(0xffffff, 0.95));
-      var d1 = new THREE.DirectionalLight(0xffffff, 1.1); d1.position.set(30, 50, 40); scene.add(d1);
-      var d2 = new THREE.DirectionalLight(0xffffff, 0.45); d2.position.set(-40, 20, -30); scene.add(d2);
-
-      var loader = new THREE.GLTFLoader();
-      var draco = new THREE.DRACOLoader();
-      draco.setDecoderPath('assets/js/draco/');
-      loader.setDRACOLoader(draco);
-      loader.load('assets/models/macbook-14-transformed.glb', function (gltf) {
-        try { buildLaptop(gltf.scene); } catch (e) { falha(); }
-      }, undefined, function () { falha(); });
-    } catch (e) { falha(); }
-  }
-
-  function buildLaptop(model) {
-    scene.add(model);
-    model.updateMatrixWorld(true);
-    var bbox = new THREE.Box3().setFromObject(model);
-    var center = bbox.getCenter(new THREE.Vector3());
-    var size = bbox.getSize(new THREE.Vector3());
-
-    yawGroup = new THREE.Group();
-    yawGroup.position.copy(center);
-    scene.add(yawGroup);
-    var meshes = [];
-    model.traverse(function (o) { if (o.isMesh) meshes.push(o); });
-    meshes.forEach(function (m) { yawGroup.attach(m); });
-    scene.remove(model);
-
-    pivot = new THREE.Group();
-    pivot.position.set(PIVOT_WORLD.x - center.x, PIVOT_WORLD.y - center.y, PIVOT_WORLD.z - center.z);
-    yawGroup.add(pivot);
-    scene.updateMatrixWorld(true);
-
-    /* Cilindro da dobradiça: mascara a costura do corte em qualquer ângulo. */
-    var barrelGeo = new THREE.CylinderGeometry(0.55, 0.55, 34.5, 24);
-    barrelGeo.rotateZ(Math.PI / 2);
-    var barrel = new THREE.Mesh(barrelGeo, new THREE.MeshStandardMaterial({ color: 0x1c1c1f, metalness: 0.9, roughness: 0.35 }));
-    barrel.position.copy(pivot.position);
-    yawGroup.add(barrel);
-
-    /* Sombra suave sob o notebook (plano com gradiente radial). */
-    var sc = document.createElement('canvas'); sc.width = sc.height = 128;
-    var ctx = sc.getContext('2d');
-    var grad = ctx.createRadialGradient(64, 64, 4, 64, 64, 64);
-    grad.addColorStop(0, 'rgba(0,0,0,0.55)'); grad.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = grad; ctx.fillRect(0, 0, 128, 128);
-    var shadowTex = new THREE.CanvasTexture(sc);
-    var shadow = new THREE.Mesh(
-      new THREE.PlaneGeometry(42, 30),
-      new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false })
-    );
-    shadow.rotation.x = -Math.PI / 2;
-    shadow.position.set(0, -1.2 - center.y, 0);
-    yawGroup.add(shadow);
-
-    meshes.forEach(function (m) {
-      if (m.name === DISPLAY_MESH) displayMat = m.material;
-      m.geometry.computeBoundingBox();
-      var bb = m.geometry.boundingBox;
-      if (bb.max.y < HINGE_Y) { pivot.attach(m); return; }
-      if (bb.min.y >= HINGE_Y) return;
-      var parts = splitGeometry(m.geometry, HINGE_Y);
-      m.geometry = parts.base;
-      var lidMesh = new THREE.Mesh(parts.lid, m.material);
-      lidMesh.position.copy(m.position);
-      lidMesh.quaternion.copy(m.quaternion);
-      lidMesh.scale.copy(m.scale);
-      yawGroup.add(lidMesh);
-      pivot.attach(lidMesh);
-    });
-
-    /* Tela: captura real do site dele no lugar do papel de parede. */
-    if (displayMat) {
-      new THREE.TextureLoader().load(SCREENS[0].src, function (tex) {
-        tex.encoding = THREE.sRGBEncoding;
-        tex.anisotropy = Math.min(8, renderer.capabilities.getMaxAnisotropy());
-        displayMat.emissiveMap = tex;
-        displayMat.emissive = new THREE.Color(0xffffff);
-        displayMat.emissiveIntensity = 1.6;
-        displayMat.needsUpdate = true;
-        needsRender = true;
-      });
-    }
-
-    /* Câmera: enquadra o modelo inteiro com margem. */
-    var radius = size.length() / 2;
-    var dist = radius / Math.tan(THREE.MathUtils.degToRad(38 / 2));
-    camera.position.set(center.x + dist * 0.50, center.y + dist * 0.34, center.z + dist * 0.80);
-    camera.lookAt(center);
-    yawGroup.rotation.y = yaw;
-    pivot.rotation.x = lidAngle;
-    fit();
-    needsRender = true;
-
-    /* Interação: arraste gira (inércia), botões giram em passos, setas giram
-       e abrem/fecham a tampa. Scroll vertical do mobile preservado (pan-y). */
-    palco.addEventListener('pointerdown', function (e) {
-      dragging = true; moved = false; lastX = x0 = e.clientX; velYaw = 0;
-      if (inertia) cancelAnimationFrame(inertia);
-      if (yawAnim) cancelAnimationFrame(yawAnim);
-    });
-    window.addEventListener('pointermove', function (e) {
-      if (!dragging) return;
-      var dx = e.clientX - lastX; lastX = e.clientX;
-      velYaw = dx * 0.005;
-      if (Math.abs(e.clientX - x0) > 4) {
-        moved = true;
-        setYaw(yaw + velYaw, false);
-      }
-    });
-    function endDrag() {
-      if (!dragging) return; dragging = false;
-      if (Math.abs(velYaw) < 0.001) return;
-      (function passo() {
-        setYaw(yaw + velYaw, false); velYaw *= 0.94;
-        if (Math.abs(velYaw) >= 0.0005) inertia = requestAnimationFrame(passo); else inertia = null;
-      })();
-    }
-    window.addEventListener('pointerup', endDrag);
-    window.addEventListener('pointercancel', endDrag);
-    palco.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); setYaw(yaw + 0.63, true); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); setYaw(yaw - 0.63, true); }
-      if (e.key === 'ArrowUp') { e.preventDefault(); setLid(lidAngle - 0.2, true, 300); }
-      if (e.key === 'ArrowDown') { e.preventDefault(); setLid(lidAngle + 0.2, true, 300); }
-    });
-    var bA = document.getElementById('nb3dAnt'), bP = document.getElementById('nb3dProx');
-    if (bA) bA.addEventListener('click', function () { setYaw(yaw + 0.63, true); });
-    if (bP) bP.addEventListener('click', function () { setYaw(yaw - 0.63, true); });
-    window.addEventListener('resize', fit);
-    new IntersectionObserver(function (entries) {
-      visible = entries[0].isIntersecting;
-      if (visible) needsRender = true;
-    }, { threshold: 0 }).observe(palco);
-
-    /* Abertura: a tampa abre sozinha quando a seção entra na tela. */
-    var opened = false;
-    new IntersectionObserver(function (entries, obs) {
-      if (entries[0].isIntersecting && !opened) {
-        opened = true; obs.disconnect();
-        setLid(0, !reduz, 1500);
-      }
-    }, { threshold: 0.3 }).observe(palco);
-
-    /* Carrossel da tela (só anda com 2+ capturas verificadas). */
-    if (SCREENS.length > 1 && !reduz) {
-      screenTimer = setInterval(function () {
-        if (!visible || !displayMat) return;
-        screenIdx = (screenIdx + 1) % SCREENS.length;
-        new THREE.TextureLoader().load(SCREENS[screenIdx].src, function (tex) {
-          tex.encoding = THREE.sRGBEncoding;
-          displayMat.emissiveMap = tex;
-          displayMat.needsUpdate = true;
-          needsRender = true;
-        });
-      }, 7000);
-    }
-    loop();
-  }
-
-  /* Carga preguiçosa: Three.js + modelo só baixam quando a seção se aproxima. */
-  var started = false;
-  function start() {
-    if (started) return; started = true;
-    loadScript('assets/js/three.min.js')
-      .then(function () { return loadScript('assets/js/GLTFLoader.js'); })
-      .then(function () { return loadScript('assets/js/DRACOLoader.js'); })
-      .then(init)
-      .catch(falha);
-  }
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries, obs) {
-      if (entries[0].isIntersecting) { obs.disconnect(); start(); }
-    }, { rootMargin: '400px' }).observe(palco);
-  } else { start(); }
-})();
-
 /* Hero: letreiro responde levemente ao mouse (desktop) */
 (function () {
   if (reduz || !finoPonteiro || !hero) return;
@@ -1482,7 +1159,75 @@ if (finoPonteiro && !reduz) {
 })();
 
 /* Mensagem para quem inspeciona — especialista abre o DevTools. */
+/* Nav lateral (desktop largo): acende a seção da vez */
+(function () {
+  var lat = document.getElementById('navLateral'); if (!lat || !('IntersectionObserver' in window)) return;
+  var links = lat.querySelectorAll('a'), mapa = {};
+  links.forEach(function (a) { mapa[a.getAttribute('href').slice(1)] = a; });
+  var ioN = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      links.forEach(function (a) { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+      var a = mapa[e.target.id]; if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'true'); }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(mapa).forEach(function (id) { var s = document.getElementById(id); if (s) ioN.observe(s); });
+  function mostra() { lat.classList.toggle('mostra', hero.getBoundingClientRect().bottom < window.innerHeight * 0.5); }
+  window.addEventListener('scroll', mostra, { passive: true }); mostra();
+})();
+
+/* Letreiros gigantes vazados: parallax no scroll (desktop) */
+(function () {
+  if (reduz || !finoPonteiro) return;
+  var gig = [].slice.call(document.querySelectorAll('[data-parallax]'));
+  if (!gig.length) return;
+  var t = false;
+  function anda() {
+    var vh = window.innerHeight;
+    gig.forEach(function (el) {
+      var r = el.parentNode.getBoundingClientRect(); if (r.bottom < -200 || r.top > vh + 200) return;
+      var k = +el.getAttribute('data-parallax'), c = (r.top + r.height / 2 - vh / 2);
+      el.style.translate = '0 ' + (c * k).toFixed(1) + 'px';
+    });
+    t = false;
+  }
+  window.addEventListener('scroll', function () { if (!t) { t = true; requestAnimationFrame(anda); } }, { passive: true });
+  anda();
+})();
+
 console.log('%cE aí, especialista. Inspecionou, né? Bom gosto — este site foi feito para impressionar quem entende. — UNICO', 'color:#FF1111;font-weight:bold;font-size:14px;');
+})();
+</script>
+<script>
+/* NOTEBOOK 3D — Three.js só é baixado quando a mentoria se aproxima (não pesa na abertura do site).
+   Sem WebGL, com erro ou sem suporte a import(): a foto plana continua no lugar. */
+(function () {
+  var palco = document.getElementById('nbPalco'), fig = document.getElementById('nbFigura');
+  if (!palco || !fig || !('IntersectionObserver' in window) || !('ResizeObserver' in window)) return;
+  var gl = null;
+  try { var c = document.createElement('canvas'); gl = c.getContext('webgl2') || c.getContext('webgl'); } catch (e) {}
+  if (!gl) return;
+  var ext = gl.getExtension('WEBGL_lose_context'); if (ext) ext.loseContext();
+  function falhou() { fig.classList.remove('nb-3d'); }
+  var io = new IntersectionObserver(function (es) {
+    if (!es[0].isIntersecting) return; io.disconnect();
+    var mobile = window.matchMedia('(max-width: 820px)').matches;
+    import('./assets/js/notebook3d.js').then(function (m) {
+      return m.montar(palco, {
+        tela: 'assets/img/notebook-tela.webp',
+        zoom: mobile ? 1.02 : 0.92,
+        aoGirar: function (g, fi) { palco.style.setProperty('--gx', Math.sin(g).toFixed(3)); palco.style.setProperty('--gy', ((fi - 0.24) * 3).toFixed(3)); },
+        aoTerminarIntro: function () { fig.classList.add('nb-dica-on'); },
+        aoArrastar: function () { fig.classList.add('nb-usou'); },
+        aoFalhar: falhou
+      });
+    }).then(function (api) {
+      window.UNICO_NB = api;   /* estado do 3D (usado pelo teste automático) */
+      fig.classList.add('nb-3d');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) fig.classList.add('nb-dica-on');
+    }).catch(falhou);
+  }, { rootMargin: '700px 0px' });
+  io.observe(palco);
 })();
 </script>
 </body>
